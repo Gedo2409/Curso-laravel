@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Sportcenter</title>
+        <title>Sportcenter | Home </title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -76,6 +76,8 @@
                             <a href="{{ route('register') }}">Register</a>
                         @endif
                     @endauth
+
+
                 </div>
             @endif
 
@@ -92,6 +94,7 @@
                     <a href="https://nova.laravel.com">Nova</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="home2.blade.php">Home</a>
                 </div>
             </div>
         </div>
