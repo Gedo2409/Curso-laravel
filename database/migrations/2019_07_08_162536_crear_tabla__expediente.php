@@ -13,9 +13,9 @@ class CrearTablaExpediente extends Migration
      */
     public function up()
     {
-        Schema::create('expediente', function (Blueprint $table) {
+        Schema::create('Expediente', function (Blueprint $table) {
             $table->bigIncrements('id');
-
+            $table->string('telefono', 25);
             $table->double('cintura');
             $table->double('GrasaCorporal');
             $table->double('grasaviceral');
@@ -25,9 +25,8 @@ class CrearTablaExpediente extends Migration
             $table->double('VMI');
             $table->date('FechaIni');
             $table->date('FechaPago');
-            $table->foreign('alumn_id')->references('id')->on('usuario')->onDelete('restrict')->onUpdate('restrict');
-
-
+            $table->unsignedBigInteger("alumno_id");
+            $table->foreign('alumno_id')->references('id')->on('usuario')->onDelete('restrict')->onUpdate('restrict');
             $table->timestamps();
         });
     }
@@ -39,6 +38,6 @@ class CrearTablaExpediente extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('expediente');
+        Schema::dropIfExists('Expediente');
     }
 }
