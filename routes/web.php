@@ -17,4 +17,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home'); //Generar botones de registro e inicio de sesion 
+
+Route::get('permiso', 'PermisoController@create');
